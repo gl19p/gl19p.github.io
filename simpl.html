@@ -1,10 +1,18 @@
 <!doctype html>
-<html><head><title>simpl</title><script src="simplParsr.js"></script>
-<script>
-function interpret(form){
-parse(form.Code.value)}</script></head><body><form>
+<html><head><title>simpl</title><script>var a;
+  function parse(){
+var cArray=code.split();
+for(let inst of cArray){
+if (inst=="in"){
+takeInput();}
+if (inst=="sa9"){a=9;}
+if (inst=="prt"){alert(a);}}}
+
+
+function takeInput(){}
+</script></head><body><form>
 Code: <textarea name="Code"> </textarea>
-<INPUT TYPE="button" NAME="button" Value="Click" onClick="interpret(this.form)">
+<INPUT TYPE="button" NAME="button" Value="Click" onClick="parse(document.getElementsByTagName(textarea)[0].value)">
 </form>
 </body>
 </html>
